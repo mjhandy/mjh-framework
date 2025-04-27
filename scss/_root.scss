@@ -1,0 +1,36 @@
+:root {
+	// base colours
+	--#{$prefix}-white: #{$white};
+	--#{$prefix}-whiteRGB100: #{$whiteRGB100};
+  // blacks
+	--#{$prefix}-black: #{$black};
+  @each $color, $value in $blacks {
+    --#{$prefix}-black-#{$color}: #{$value};
+  }
+	// reds
+	--#{$prefix}-red: #{$red};
+	// reds
+	@each $color, $value in $reds {
+		--#{$prefix}-red-#{$color}: #{$value};
+	}
+	// greens
+	--#{$prefix}-green: #{$green};
+	@each $color, $value in $greens {
+		--#{$prefix}-green-#{$color}: #{$value};
+	}
+	// blues
+	--#{$prefix}-blue: #{$blue};
+	@each $color, $value in $blues {
+		--#{$prefix}-blue-#{$color}: #{$value};
+	}
+
+
+	// typography
+	--#{$prefix}-font-family-sans-serif: #{$font-family-sans-serif};
+	--#{$prefix}-font-size-base: #{$font-size-base};
+	--#{$prefix}-line-height-base: #{$line-height-base};
+	// heading sizes
+	@each $heading, $size in $heading {
+		--#{$prefix}-#{$heading}-font-size: #{$size};
+	}
+}

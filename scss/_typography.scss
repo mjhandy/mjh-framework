@@ -1,0 +1,27 @@
+h1,
+h2,
+h3,
+.h1,
+.h2,
+.h3 {
+    font-family: var(--mjh-font-family-sans-serif);
+    font-weight: 400;
+    line-height: var(--mjh-line-height-base);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+h1,
+.h1 {
+    font-size: var(--mjh-h1-font-size);
+}
+
+h2,
+.h2 {
+    font-size: var(--mjh-h2-font-size);
+}
+
+h3,
+.h3 {
+    font-size: var(--mjh-h3-font-size);
+}

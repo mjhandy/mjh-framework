@@ -1,0 +1,11 @@
+// HEX to RGBA
+// Example usage
+//   $color: hex-to-rgba(#3498db, 0.7);
+
+@function hex-to-rgba($hex, $alpha) {
+    $red: red($hex);
+    $green: green($hex);
+    $blue: blue($hex);
+
+    @return rgba($red, $green, $blue, $alpha);
+}
