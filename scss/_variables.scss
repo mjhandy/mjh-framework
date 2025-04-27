@@ -2,9 +2,8 @@
 $prefix: 'mjh';
 // base colours
 $white: #ffffff;
-$whiteRGB100: hex-to-rgba($white,1);
 $black: #000000;
-$blacks:(
+$blacks: (
     100: #000000,
     200: #1a1a1a,
     300: #333333,
@@ -16,7 +15,7 @@ $blacks:(
     900: #cccccc
 );
 $red: #ff0000;
-$reds:(
+$reds: (
     100: #ff0000,
     200: #ff1a1a,
     300: #ff3333,
@@ -28,7 +27,7 @@ $reds:(
     900: #ffcccc
 );
 $green: #00ff00;
-$greens:(
+$greens: (
     100: #00ff00,
     200: #1aff1a,
     300: #33ff33,
@@ -40,7 +39,7 @@ $greens:(
     900: #ccffcc
 );
 $blue: #0000ff;
-$blues:(
+$blues: (
     100: #0000ff,
     200: #1a1aff,
     300: #3333ff,
@@ -56,15 +55,17 @@ $blues:(
 
 // typography
 $font-family-sans-serif: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+$font-base: var(--#{$prefix}font-sans-serif); 
+$font-size-root: null;
 $font-size-base: 1rem; // this can only have a REM unit, PX will cause an error
 $line-height-base: 1.5;
 
 // heading sizes
-$heading:(
-  h1: $font-size-base * 3,
-  h2: $font-size-base * 2.5,
-  h3: $font-size-base * 2,
-  h4: $font-size-base * 1.5,
-  h5: $font-size-base * 1.25,
-  h6: $font-size-base * 1.125
+$heading: (
+    h1: $font-size-base * 3,
+    h2: $font-size-base * 2.5,
+    h3: $font-size-base * 2,
+    h4: $font-size-base * 1.5,
+    h5: $font-size-base * 1.25,
+    h6: $font-size-base * 1.125
 );

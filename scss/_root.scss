@@ -1,7 +1,6 @@
 :root {
 	// base colours
 	--#{$prefix}-white: #{$white};
-	--#{$prefix}-whiteRGB100: #{$whiteRGB100};
   // blacks
 	--#{$prefix}-black: #{$black};
   @each $color, $value in $blacks {
@@ -26,7 +25,7 @@
 
 
 	// typography
-	--#{$prefix}-font-family-sans-serif: #{$font-family-sans-serif};
+	--#{$prefix}-font-family-base: #{$font-family-sans-serif};
 	--#{$prefix}-font-size-base: #{$font-size-base};
 	--#{$prefix}-line-height-base: #{$line-height-base};
 	// heading sizes

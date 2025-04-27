@@ -25,3 +25,11 @@ h3,
 .h3 {
     font-size: var(--mjh-h3-font-size);
 }
+
+p{
+    font-size: var(--mjh-font-size-base);
+    line-height: var(--mjh-line-height-base);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--mjh-black-100);
+}
