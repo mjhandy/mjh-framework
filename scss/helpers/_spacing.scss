@@ -1,35 +1,51 @@
-// Margins & Padding
-// This file contains the margin utility classes for the project.
+/* Margins & Padding */
+// This file contains the spacing utility classes for the project.
+// It includes classes for margins and padding, as well as width utilities.
+// The spacing values are defined in the _variables.scss file and are used to create the utility classes.s
 .m {
 	@each $space, $value in $spaces {
 		&t-#{$space} {
 			margin-top: $value;
 		}
+
 		&r-#{$space} {
 			margin-right: $value;
 		}
+
 		&b-#{$space} {
-			margin-bottom:$value;
-		}	
+			margin-bottom: $value;
+		}
+
 		&l-#{$space} {
-			margin-left:$value;
-		}					
+			margin-left: $value;
+		}
 	}
 }
-
+// Padding
 .p {
 	@each $space, $value in $spaces {
 		&t-#{$space} {
 			margin-top: $value;
 		}
+
 		&r-#{$space} {
 			margin-right: $value;
 		}
+
 		&b-#{$space} {
-			margin-bottom:$value;
-		}	
+			margin-bottom: $value;
+		}
+
 		&l-#{$space} {
-			margin-left:$value;
-		}					
+			margin-left: $value;
+		}
+	}
+}
+/* widths */
+.w {
+	@each $width, $value in $w {
+		&-#{$width} {
+			width: $value;
+		}
 	}
 }
