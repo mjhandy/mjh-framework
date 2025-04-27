@@ -1,0 +1,35 @@
+// Margins & Padding
+// This file contains the margin utility classes for the project.
+.m {
+	@each $space, $value in $spaces {
+		&t-#{$space} {
+			margin-top: $value;
+		}
+		&r-#{$space} {
+			margin-right: $value;
+		}
+		&b-#{$space} {
+			margin-bottom:$value;
+		}	
+		&l-#{$space} {
+			margin-left:$value;
+		}					
+	}
+}
+
+.p {
+	@each $space, $value in $spaces {
+		&t-#{$space} {
+			margin-top: $value;
+		}
+		&r-#{$space} {
+			margin-right: $value;
+		}
+		&b-#{$space} {
+			margin-bottom:$value;
+		}	
+		&l-#{$space} {
+			margin-left:$value;
+		}					
+	}
+}

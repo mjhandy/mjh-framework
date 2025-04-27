@@ -4,9 +4,7 @@ h3,
 .h1,
 .h2,
 .h3 {
-    font-family: var(--#{$prefix}-font-family-base);
     font-weight: 400;
-    line-height: var(--#{$prefix}-line-height-base);
     margin-top: 0;
     margin-bottom: 0.5rem;
 }

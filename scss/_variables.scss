@@ -69,3 +69,18 @@ $heading: (
     h5: $font-size-base * 1.25,
     h6: $font-size-base * 1.125
 );
+
+//spacing
+$space: 10px;
+$spaces:(
+    1: $space * 0.25,
+    2: $space * 0.5,
+    3: $space * 1,
+    4: $space * 1.5,
+    5: $space * 2,
+    6: $space * 3,
+    7: $space * 4,
+    8: $space * 5,
+    9: $space * 6,
+    10: $space * 7
+)

@@ -3,33 +3,25 @@
 	--#{$prefix}-white: #{$white};
 	// blacks
 	--#{$prefix}-black: #{$black};
-
 	@each $color, $value in $blacks {
 		--#{$prefix}-black-#{$color}: #{$value};
 	}
-
 	// reds
 	--#{$prefix}-red: #{$red};
-
-	// reds
 	@each $color, $value in $reds {
 		--#{$prefix}-red-#{$color}: #{$value};
 	}
-
 	// greens
 	--#{$prefix}-green: #{$green};
-
 	@each $color, $value in $greens {
 		--#{$prefix}-green-#{$color}: #{$value};
 	}
-
 	// blues
 	--#{$prefix}-blue: #{$blue};
-
 	@each $color, $value in $blues {
 		--#{$prefix}-blue-#{$color}: #{$value};
 	}
-
+	// base font colour
 	--#{$prefix}-base-colour: #{$base-colour};
 
 	// typography
