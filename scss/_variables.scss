@@ -55,10 +55,10 @@ $blues: (
 
 // typography
 $font-family-sans-serif: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-$font-base: var(--#{$prefix}font-sans-serif); 
 $font-size-root: null;
 $font-size-base: 1rem; // this can only have a REM unit, PX will cause an error
 $line-height-base: 1.5;
+$base-colour: map-get($blacks, 200); // default base color 
 
 // heading sizes
 $heading: (
