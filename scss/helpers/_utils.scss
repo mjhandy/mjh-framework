@@ -1,7 +1,7 @@
-/* Utilitied */
-// This file contains the spacing utility classes for the project.
-// It includes classes for margins and padding, as well as width utilities.
-// The spacing values are defined in the _variables.scss file and are used to create the utility classes.s
+
+
+/// Margin classes
+/// @group Utilities
 .m {
 	@each $space, $value in $spaces {
 		&t-#{$space} {
@@ -21,7 +21,8 @@
 		}
 	}
 }
-// Padding
+/// Padding classes
+/// @group Utilities
 .p {
 	@each $space, $value in $spaces {
 		&t-#{$space} {
@@ -41,7 +42,10 @@
 		}
 	}
 }
-/* widths */
+
+
+/// Width classes
+/// @group Utilities
 .w {
 	@each $width, $value in $w {
 		&-#{$width} {

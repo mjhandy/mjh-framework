@@ -1,0 +1,10 @@
+{
+  "name": "A Handy Framework",
+  "version": "0.0.1",
+  "description": "A Handy Framework for my projoects",
+  "package": "package.json",
+  "groups":{
+    "cv": "Colour",
+    "tv": "Typography"
+  }
+}
