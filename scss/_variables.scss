@@ -52,7 +52,6 @@ $blues: (
 ) !default;
 
 
-
 // typography
 $font-family-sans-serif: 'Roboto', 'Helvetica Neue', Arial, sans-serif !default;
 $font-family-serif: 'Georgia', 'Times New Roman', Times, serif !default;
@@ -69,10 +68,10 @@ $heading: (
     h4: $font-size-base * 1.5,
     h5: $font-size-base * 1.25,
     h6: $font-size-base * 1.125
-);
+)!default;
 
 //spacing
-$space: 10px;
+$space: 10px !default;  
 $spaces:(
     1: $space * 0.25,
     2: $space * 0.75,
@@ -82,7 +81,7 @@ $spaces:(
     6: $space * 1.5,
     7: $space * 1.75,
     8: $space * 2
-);
+) !default;
 // breakpoints
 $bps: (
     xs: 0,
