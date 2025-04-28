@@ -1,8 +1,8 @@
 // prefix
-$prefix: 'mjh';
+$prefix: 'mjh' !default;
 // base colours
-$white: #ffffff;
-$black: #000000;
+$white: #ffffff !default;
+$black: #000000 !default;
 $blacks: (
     100: #000000,
     200: #1a1a1a,
@@ -13,8 +13,8 @@ $blacks: (
     700: #999999,
     800: #b3b3b3,
     900: #cccccc
-);
-$red: #ff0000;
+) !default;
+$red: #ff0000 !default;
 $reds: (
     100: #ff0000,
     200: #ff1a1a,
@@ -25,8 +25,8 @@ $reds: (
     700: #ff9999,
     800: #ffb3b3,
     900: #ffcccc
-);
-$green: #00ff00;
+) !default;
+$green: #00ff00 !default;
 $greens: (
     100: #00ff00,
     200: #1aff1a,
@@ -37,8 +37,8 @@ $greens: (
     700: #99ff99,
     800: #b3ffb3,
     900: #ccffcc
-);
-$blue: #0000ff;
+) !default;
+$blue: #0000ff !default;
 $blues: (
     100: #0000ff,
     200: #1a1aff,
@@ -49,16 +49,17 @@ $blues: (
     700: #9999ff,
     800: #b3b3ff,
     900: #ccccff
-);
+) !default;
 
 
 
 // typography
-$font-family-sans-serif: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-$font-size-root: null;
-$font-size-base: 1rem; // this can only have a REM unit, PX will cause an error
-$line-height-base: 1.5;
-$base-colour: map-get($blacks, 200); // default base color 
+$font-family-sans-serif: 'Roboto', 'Helvetica Neue', Arial, sans-serif !default;
+$font-family-serif: 'Georgia', 'Times New Roman', Times, serif !default;
+$font-size-root: null !default; 
+$font-size-base: 1rem !default; // this can only have a REM unit, PX will cause an error
+$line-height-base: 1.5 !default; // this can only have a REM unit, PX will cause an error
+$base-colour: map-get($blacks, 200) !default; // default base color 
 
 // heading sizes
 $heading: (
@@ -90,7 +91,7 @@ $bps: (
     lg: 992px,
     xl: 1200px,
     xxl: 1400px
-);
+) !default;
 // widths as %
 $w:(
     125: 12.5%,
@@ -102,4 +103,4 @@ $w:(
     75: 75%,
     875: 87.5%,
     100: 100%
-)
+) !default;
