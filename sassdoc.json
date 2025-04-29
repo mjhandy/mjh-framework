@@ -5,6 +5,6 @@
   "package": "package.json",
   "groups":{
     "cv": "Colour",
-    "tv": "Typography"
-  }
+    "tv": "Typography",
+    "mx": "Mxins"  }
 }
