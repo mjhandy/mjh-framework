@@ -1,4 +1,4 @@
-/// prefix
+/// SCSS Prefix. Adjust this to change the prefix for all classes.
 /// @group cv
 /// @name Prefix
 $prefix: 'mjh' !default;
@@ -8,7 +8,7 @@ $prefix: 'mjh' !default;
 /// @name White
 $white: #ffffff !default;
 
-/// BaseBlack
+/// Base Black
 /// @group cv
 /// @name Black
 $black: #000000 !default;
@@ -28,7 +28,7 @@ $blacks: (
     900: #cccccc
 ) !default;
 
-/// Red
+/// Base Red
 /// @group cv
 /// @name Red
 $red: #ff0000 !default;
@@ -46,7 +46,7 @@ $reds: (
     800: #ffb3b3,
     900: #ffcccc
 ) !default;
-/// Green
+/// Base Green
 /// @group cv
 /// @name Green
 $green: #00ff00 !default;
@@ -61,7 +61,13 @@ $greens: (
     800: #b3ffb3,
     900: #ccffcc
 ) !default;
+/// Base Blue
+/// @group cv
+/// @name Blue
 $blue: #0000ff !default;
+/// Shades of blue
+/// @group cv
+/// @name Shades of Blue
 $blues: (
     100: #0000ff,
     200: #1a1aff,
