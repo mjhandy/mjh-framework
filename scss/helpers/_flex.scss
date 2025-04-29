@@ -1,3 +1,6 @@
+
+/// this is a flexbox helper class
+/// @group Helpers
 .flex {
   display: flex;
 
@@ -6,6 +9,8 @@
   }
 }
 
+/// this is a justify helper class
+/// @group Helpers
 .justify {
   &-start {
     justify-content: flex-start;
@@ -28,6 +33,8 @@
   }
 }
 
+/// this is a align helper class
+/// @group Helpers
 .align {
   &-start {
     align-items: flex-start;
@@ -50,6 +57,8 @@
   }
 }
 
+/// this is a wrap helper clas
+/// @group Helpers
 .wrap {
   &-wrap {
     flex-wrap: wrap;

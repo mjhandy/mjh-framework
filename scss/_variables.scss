@@ -1,8 +1,21 @@
-// prefix
+/// prefix
+/// @group cv
+/// @name Prefix
 $prefix: 'mjh' !default;
-// base colours
+
+/// Base White
+/// @group cv
+/// @name White
 $white: #ffffff !default;
+
+/// BaseBlack
+/// @group cv
+/// @name Black
 $black: #000000 !default;
+
+/// Shades of black
+/// @group cv
+/// @name Shades of black
 $blacks: (
     100: #000000,
     200: #1a1a1a,
@@ -14,7 +27,14 @@ $blacks: (
     800: #b3b3b3,
     900: #cccccc
 ) !default;
+
+/// Red
+/// @group cv
+/// @name Red
 $red: #ff0000 !default;
+/// Shades of red
+/// @group cv
+/// @name Shades of Red
 $reds: (
     100: #ff0000,
     200: #ff1a1a,
@@ -26,6 +46,9 @@ $reds: (
     800: #ffb3b3,
     900: #ffcccc
 ) !default;
+/// Green
+/// @group cv
+/// @name Green
 $green: #00ff00 !default;
 $greens: (
     100: #00ff00,
@@ -52,16 +75,35 @@ $blues: (
 ) !default;
 
 
-
-// typography
+/// Sans Serif Font Family
+/// @group tv
+/// @name Sans Serif Font Family
 $font-family-sans-serif: 'Roboto', 'Helvetica Neue', Arial, sans-serif !default;
+/// Serif Font Family
+/// @group tv
+/// @name Serif Font Family
 $font-family-serif: 'Georgia', 'Times New Roman', Times, serif !default;
-$font-size-root: null !default; 
+// $font-size-root: null !default; 
+/// Base font size
+/// @group tv
+/// @name Base font size
 $font-size-base: 1rem !default; // this can only have a REM unit, PX will cause an error
+/// Base line height
+/// @group tv
+/// @name Base line height
 $line-height-base: 1.5 !default; // this can only have a REM unit, PX will cause an error
+/// Base font colour
+/// @group tv
+/// @name Base font colour
 $base-colour: map-get($blacks, 200) !default; // default base color 
 
-// heading sizes
+/// Heading sizes
+/// @group tv
+/// @name Heading SCSS Map
+/// @example Usage
+///   .h1{
+///     font-size: map-get($heading, h1);
+///    }
 $heading: (
     h1: $font-size-base * 3,
     h2: $font-size-base * 2.5,
@@ -69,10 +111,10 @@ $heading: (
     h4: $font-size-base * 1.5,
     h5: $font-size-base * 1.25,
     h6: $font-size-base * 1.125
-);
+)!default;
 
 //spacing
-$space: 10px;
+$space: 10px !default;  
 $spaces:(
     1: $space * 0.25,
     2: $space * 0.75,
@@ -82,7 +124,7 @@ $spaces:(
     6: $space * 1.5,
     7: $space * 1.75,
     8: $space * 2
-);
+) !default;
 // breakpoints
 $bps: (
     xs: 0,

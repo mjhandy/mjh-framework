@@ -1,2 +1,4 @@
 # Ignore CSS folder
 /css
+/node_modules
+/docs

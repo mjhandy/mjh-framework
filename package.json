@@ -1,0 +1,29 @@
+{
+  "name": "a-handy-framework",
+  "version": "0.0.1",
+  "description": "A Handy Framework for my projoects",
+  "keywords": [
+    "scss",
+    "css"
+  ],
+  "homepage": "https://github.com/mjhandy/a-handy-framework#readme",
+  "bugs": {
+    "url": "https://github.com/mjhandy/a-handy-framework/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjhandy/a-handy-framework.git"
+  },
+  "license": "ISC",
+  "author": "Mark J. Handy",
+  "type": "commonjs",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sdoc": "sassdoc --verbose --config sassdoc.json --theme default --dest docs scss"
+    
+  },
+  "devDependencies": {
+    "sassdoc": "^2.7.4"
+  }
+}

@@ -4,14 +4,6 @@
 	box-sizing: border-box;
 }
 
-
-// root
-:root {
-	@if $font-size-root !=null {
-		@include font-size(var(--#{$prefix}root-font-size));
-	}
-}
-
 body {
   margin: 0; // 1
   font-family: var(--#{$prefix}-font-family-base);
