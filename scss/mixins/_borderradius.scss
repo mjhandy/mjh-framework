@@ -1,58 +1,15 @@
-/// @name Border Radius Mixin
+/// A single mixin to set all four corners of a box.
+/// @name Border Radius
 /// @group mx
-/// @param {string} $radius [10px] -  Set the border radius for all four corners. This can be a pixel value (e.g. 5px), a percentage (e.g. 50%) or a REM (e.g. 0.5rem).
-/// @example .class{ @include border-radius(5px); } -  This will set the border radius for all four corners to 5px.
-@mixin border-radius($radius: 10px) {
-  -webkit-border-radius: $radius;
-  border-radius: $radius;
-  background-clip: padding-box; /* stops bg color from leaking outside the border: */
-}
-
-/// @name Border Radius Top
-/// @group mx
-/// @param {string} $radius [10px] -  Set the border radius for the top corners. This can be a pixel value (e.g. 5px), a percentage (e.g. 50%) or a REM (e.g. 0.5rem).
-/// @example .class{ @include border-radius-top(5px); } -  This will set the border radius for the top corners to 5px.
-@mixin border-radius-top($radius) {
-  -webkit-border-top-left-radius: $radius;
-  -webkit-border-top-right-radius: $radius;
-  border-top-left-radius: $radius;
-  border-top-right-radius: $radius;
-}
-/// @name Border Radius Bottom
-/// @group mx
-/// @param {string} $radius [10px] -  Set the border radius for the top corners. This can be a pixel value (e.g. 5px), a percentage (e.g. 50%) or a REM (e.g. 0.5rem).
-/// @example .class{ @include border-radius-bottom(5px); } -  This will set the border radius for the bottom corners to 5px.
-@mixin border-radius-bottom($radius) {
-  -webkit-border-bottom-left-radius: $radius;
-  -webkit-border-bottom-right-radius: $radius;
-  border-bottom-left-radius: $radius;
-  border-bottom-right-radius: $radius;
-}
-@mixin border-radius-left($radius) {
-  -webkit-border-top-left-radius: $radius;
-  -webkit-border-bottom-left-radius: $radius;
-  border-top-left-radius: $radius;
-  border-bottom-left-radius: $radius;
-}
-@mixin border-radius-right($radius) {
-  -webkit-border-top-right-radius: $radius;
-  -webkit-border-bottom-right-radius: $radius;
-  border-top-right-radius: $radius;
-  border-bottom-right-radius: $radius;
-}
-@mixin border-radius-top-left($radius) {
-  -webkit-border-top-left-radius: $radius;
-  border-top-left-radius: $radius;
-}
-@mixin border-radius-top-right($radius) {
-  -webkit-border-top-right-radius: $radius;
-  border-top-right-radius: $radius;
-}
-@mixin border-radius-bottom-left($radius) {
-  -webkit-border-bottom-left-radius: $radius;
-  border-bottom-left-radius: $radius;
-}
-@mixin border-radius-bottom-right($radius) {
-  -webkit-border-bottom-right-radius: $radius;
-  border-bottom-right-radius: $radius;
+/// @param {string} $top-left [null] -  Top left radius
+/// @param {string} $top-right [null] -  Top right radius
+/// @param {string} $bottom-right [null] -  Bottom right radius
+/// @param {string} $bottom-left [null] -  Bottom left radius
+/// @example .box {  @include border-radius(10px, null, 20px, null); }
+@mixin border-radius($top-left: null, $top-right: null, $bottom-right: null, $bottom-left: null) {
+  border-radius: 
+    if($top-left, $top-left, 0) 
+    if($top-right, $top-right, 0)
+    if($bottom-right, $bottom-right, 0)
+    if($bottom-left, $bottom-left, 0);
 }

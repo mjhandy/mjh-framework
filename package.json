@@ -18,9 +18,8 @@
   "author": "Mark J. Handy",
   "type": "commonjs",
   "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sdoc": "sassdoc --verbose --config sassdoc.json --theme default --dest docs scss"
+  "scripts": {    
+    "sassdoc": "sassdoc --verbose --config sassdoc.json --theme default --dest documentation/scss scss"
     
   },
   "devDependencies": {

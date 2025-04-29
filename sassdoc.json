@@ -6,5 +6,5 @@
   "groups":{
     "cv": "Colour",
     "tv": "Typography",
-    "mx": "Mxins"  }
+    "mx": "Mixins"  }
 }
