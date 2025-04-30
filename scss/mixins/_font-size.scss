@@ -7,5 +7,5 @@
 /// @example .text { @include font-size(1.5rem); }
 @mixin font-size($size, $height: null) {
   font-size: if(unit($size) == "px" or unit($size) == "rem", $size, $size + rem);
-  line-height: if($height, $height, normal);
+  line-height: if($height, $height, var( --#{$prefix}-line-height-base  ));
 }
