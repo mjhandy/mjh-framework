@@ -1,0 +1,7 @@
+@include generate-grid-classes();
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: map-get($grid-config, gap);
+  margin: 0 15px
+}

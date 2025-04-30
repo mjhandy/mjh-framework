@@ -1,0 +1,16 @@
+$grid-config: (
+  columns: 12,
+  gap: 15px,
+);
+
+@mixin generate-grid-classes() {
+  @for $i from 1 through map-get($grid-config, columns) {
+    .col-#{$i} {
+      width: 100%;
+      @include bp(lg) {
+        flex: 0 0 calc(100% / $i - map-get($grid-config, gap));
+        max-width: calc(100% / $i - map-get($grid-config, gap));
+      }
+    }
+  }
+}
