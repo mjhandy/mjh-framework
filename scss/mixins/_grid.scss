@@ -1,14 +1,5 @@
-@mixin generate-grid-classes($breakpoints: (sm, md, lg, xl, xxl), $bps: $bps) {
-  $mx: map-get($grid-config, columns);
-  @each $bp in $breakpoints {
-    $bp-value: map-get($bps, $bp);
-    @for $i from 1 through $mx {
-      .col-#{$bp}-#{$i} {
-        @include bp($bp-value) {
-          width: calc(#{$i} / #{$mx} * 100%);
-          max-width: calc(#{$i} / #{$mx} * 100%);
-        }
-      }
-    }
+:root {
+  @each $name, $value in $bps {
+    --#{$prefix}-breakpoint-#{$name}: #{$value};
   }
 }

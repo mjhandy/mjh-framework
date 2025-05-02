@@ -1,4 +1,5 @@
-@include generate-grid-classes();
+// Include the mixin with your desired breakpoints and breakpoint values
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -9,5 +10,8 @@
     flex-flow: row wrap;
 
     gap: map-get($grid-config, gap) map-get($grid-config, gap);
+    
   }
 }
+
+
