@@ -131,7 +131,11 @@ $spaces:(
     7: $space * 1.75,
     8: $space * 2
 ) !default;
-// breakpoints
+
+
+/// Media Breakpoints
+/// @group cv
+/// @name Media Breakpoints
 $bps: (
     xs: 0,
     sm: 576px,
@@ -140,6 +144,19 @@ $bps: (
     xl: 1200px,
     xxl: 1400px
 ) !default;
+
+/// Max Container Widths
+/// @group cv
+/// @name Max Container Widths
+$maContainerWidths: (
+    xs: 100%,
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1320px
+) !default;
+
 // widths as %
 $w:(
     125: 12.5%,
