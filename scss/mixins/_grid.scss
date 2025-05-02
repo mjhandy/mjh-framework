@@ -1,12 +1,13 @@
-
-
-@mixin generate-grid-classes() {
-  @for $i from 1 through map-get($grid-config, columns) {
-    .col-#{$i} {
-      width: 100%;
-      @include bp(lg) {
-        // flex: 0 0 calc(100% / $i - map-get($grid-config, gap));
-        width: calc( $i/map-get($grid-config, columns) * 100%);
+@mixin generate-grid-classes($breakpoints: (sm, md, lg, xl, xxl), $bps: $bps) {
+  $mx: map-get($grid-config, columns);
+  @each $bp in $breakpoints {
+    $bp-value: map-get($bps, $bp);
+    @for $i from 1 through $mx {
+      .col-#{$bp}-#{$i} {
+        @include bp($bp-value) {
+          width: calc(#{$i} / #{$mx} * 100%);
+          max-width: calc(#{$i} / #{$mx} * 100%);
+        }
       }
     }
   }
