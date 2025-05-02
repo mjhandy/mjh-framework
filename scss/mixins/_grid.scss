@@ -1,5 +1,0 @@
-:root {
-  @each $name, $value in $bps {
-    --#{$prefix}-breakpoint-#{$name}: #{$value};
-  }
-}
