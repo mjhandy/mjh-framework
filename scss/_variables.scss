@@ -169,3 +169,12 @@ $w:(
     875: 87.5%,
     100: 100%
 ) !default;
+
+
+/// grid variables
+/// @group cv
+/// @name Grid Variables
+$grid-config: (
+  columns: 12,
+  gap: 15px,
+);

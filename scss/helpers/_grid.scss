@@ -3,8 +3,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: map-get($grid-config, gap) map-get($grid-config, gap);
-  .row{
+  .row {
+    display: flex;
+    flex-flow: row wrap;
 
+    gap: map-get($grid-config, gap) map-get($grid-config, gap);
   }
-
 }
