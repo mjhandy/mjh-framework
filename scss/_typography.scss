@@ -45,3 +45,12 @@ p {
 	margin-top: 0;
 	margin-bottom: 1rem;
 }
+
+a{
+  color: var(--#{$prefix}-link-colour);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+  &:visited {
+    color: var(--#{$prefix}-link-colour);
+  }
+}
