@@ -53,3 +53,15 @@
 		}
 	}
 }
+
+/// position classes
+/// @group Utilities
+/// @name Position classes
+/// 
+.pos {
+  @each $pos, $value in $positions {
+    &-#{$pos} {
+      position: $value;
+    }
+  }
+}
