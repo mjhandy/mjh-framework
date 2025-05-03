@@ -2,6 +2,8 @@
 /// The main scss entry point.
 /// 
 
+
+
 // Config items
 @import 'functions';
 @import 'variables';
@@ -14,6 +16,13 @@
 @import 'typography';
 @import 'helpers';
 
+// Components
+@import 'components';
+
+
+
+
+
 @if (map-get( $config, 'bsGrid') ) {
   @import 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-grid.min.css';
 }
@@ -21,3 +30,5 @@
 
 // testing
 @import 'testing';
+
+
