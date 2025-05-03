@@ -3,6 +3,13 @@
 /// @name Prefix
 $prefix: 'mjh' !default;
 
+/// SCSS Config Items
+/// @group Config
+/// @name Config Items
+$config:(
+    bsGrid: true // use the Boostrap based grid system
+);
+
 /// Base White
 /// @group cv
 /// @name White
