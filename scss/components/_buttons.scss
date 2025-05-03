@@ -13,8 +13,7 @@
     padding: $btnPadding;
     @if ( $btnBoxShadow ) {
       @include boxShadow (3, 4, 300);
-    }
-    
+    }    
   }
   &-primaryGhost{
     background-color: transparent;
@@ -48,12 +47,11 @@
       @include boxShadow (3, 4, 300);
     }
   }
-
   // button group
   &-group{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     gap: 15px;
     margin-bottom: $space;
