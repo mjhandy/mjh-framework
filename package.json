@@ -23,8 +23,5 @@
   },
   "devDependencies": {
     "sassdoc": "^2.7.4"
-  },
-  "dependencies": {
-    "bootstrap-icons": "^1.11.3"
   }
 }
