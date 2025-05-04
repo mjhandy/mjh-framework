@@ -3,83 +3,6 @@
 /// @name Prefix
 $prefix: 'mjh' !default;
 
-/// Base White
-/// @group cv
-/// @name White
-$white: #ffffff !default;
-
-/// Base Black
-/// @group cv
-/// @name Black
-$black: #000000 !default;
-
-/// Shades of black
-/// @group cv
-/// @name Shades of black
-$blacks: (
-  100: #000000,
-  200: #1a1a1a,
-  300: #333333,
-  400: #4d4d4d,
-  500: #666666,
-  600: #808080,
-  700: #999999,
-  800: #b3b3b3,
-  900: #cccccc) !default;
-
-/// Base Red
-/// @group cv
-/// @name Red
-$red: #ff0000 !default;
-
-/// Shades of red
-/// @group cv
-/// @name Shades of Red
-$reds: (
-  100: #ff0000,
-  200: #ff1a1a,
-  300: #ff3333,
-  400: #ff4d4d,
-  500: #ff6666,
-  600: #ff8080,
-  700: #ff9999,
-  800: #ffb3b3,
-  900: #ffcccc) !default;
-
-/// Base Green
-/// @group cv
-/// @name Green
-$green: #00ff00 !default;
-$greens: (
-  100: #00ff00,
-  200: #1aff1a,
-  300: #33ff33,
-  400: #4dff4d,
-  500: #66ff66,
-  600: #80ff80,
-  700: #99ff99,
-  800: #b3ffb3,
-  900: #ccffcc) !default;
-
-// Base Blue
-/// @group cv
-/// @name Blue
-$blue: #0000ff !default;
-
-/// Shades of blue
-/// @group cv
-/// @name Shades of Blue
-$blues: (
-  100: #0000ff,
-  200: #1a1aff,
-  300: #3333ff,
-  400: #4d4dff,
-  500: #6666ff,
-  600: #8080ff,
-  700: #9999ff,
-  800: #b3b3ff,
-  900: #ccccff) !default;
-
 
 /// Sans Serif Font Family
 /// @group tv
@@ -110,7 +33,7 @@ $line-height-base: 1.5 !default; // this can only have a REM unit, PX will cause
 /// Base font colour
 /// @group tv
 /// @name Base font colour
-$base-colour: map-get($blacks, 200) !default; // default base color 
+$base-colour: map-get($monochrome, 105) !default; // default base color 
 
 /// Heading sizes
 /// @group tv

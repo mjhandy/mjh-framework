@@ -2,10 +2,14 @@
 // Example usage
 //   $color: hex-to-rgba(#3498db, 0.7);
 
-@function hex-to-rgba($hex, $alpha) {
-    $red: red($hex);
-    $green: green($hex);
-    $blue: blue($hex);
+@function hex-to-rgba($color, $alpha: 1) {
+  @if type-of($color) == "color" {
+    $red: red($color);
+    $green: green($color);
+    $blue: blue($color);
 
     @return rgba($red, $green, $blue, $alpha);
+  } @else {
+    @error "hex-to-rgba(): #{$color} is not a valid hex color.";
+  }
 }
