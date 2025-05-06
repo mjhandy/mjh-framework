@@ -6,5 +6,8 @@
   "groups":{
     "cv": "Colour",
     "tv": "Typography",
-    "mx": "Mixins"  }
+    "mx": "Mixins",
+    "cf": "Config",
+    "sm": "Sass Maps",
+    "v": "Variables"}
 }

@@ -1,35 +1,28 @@
 /// SCSS Prefix. Adjust this to change the prefix for all classes.
-/// @group cv
-/// @name Prefix
+/// @group v
 $prefix: "mjh" !default;
 
 /// Sans Serif Font Family
 /// @group tv
-/// @name Sans Serif Font Family
 $font-family-sans-serif: "Roboto", "Helvetica Neue", Arial, sans-serif !default;
 
 /// Serif Font Family
 /// @group tv
-/// @name Serif Font Family
 $font-family-serif: "Georgia", "Times New Roman", Times, serif !default;
 
 /// Base font size
 /// @group tv
-/// @name Base font size
 $font-size-base: 1rem !default; // this can only have a REM unit, PX will cause an error
 /// Base line height
 /// @group tv
-/// @name Base line height
 $line-height-base: 1.5 !default; // this can only have a REM unit, PX will cause an error
 
 /// Base font colour
 /// @group tv
-/// @name Base font colour
 $base-colour: map-get($monochrome, 105) !default; // default base color
 
 /// Heading sizes
-/// @group tv
-/// @name Heading SCSS Map
+/// @group sm
 /// @example Usage
 ///   .h1{
 ///     font-size: map-get($heading, h1);
@@ -43,8 +36,12 @@ $heading: (
   h6: $font-size-base * 1.125,
 ) !default;
 
-//spacing
+/// Basic space variable
+/// @group v
 $space: 10px !default;
+
+/// Sapcing map
+/// @group sm
 $spaces: (
   1: $space * 0.25,
   2: $space * 0.75,
@@ -56,9 +53,8 @@ $spaces: (
   8: $space * 2,
 ) !default;
 
-/// Media Breakpoints Map
-/// @group cv
-/// @name bps
+/// Breakpoints Map
+/// @group sm
 $bps: (
   xs: 0,
   sm: 576px,
@@ -68,9 +64,8 @@ $bps: (
   xxl: 1400px,
 ) !default;
 
-/// Widths as %
-/// @group cv
-/// @name w
+/// Width Map
+/// @group sm
 $w: (
   125: 12.5%,
   25: 25%,
@@ -83,7 +78,8 @@ $w: (
   100: 100%,
 ) !default;
 
-// position classes
+/// Position Map
+/// @group sm
 $positions: (
   static: static,
   relative: relative,
@@ -93,9 +89,7 @@ $positions: (
 ) !default;
 
 /// button variables
-/// @group vr
-/// @name Button variables
-///
+/// @group v
 $btnPadding: 0.5rem 1rem !default; // default button padding
 $btnPrimaryColour: map-get(
   $blues,
