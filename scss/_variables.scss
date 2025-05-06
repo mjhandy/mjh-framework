@@ -93,12 +93,16 @@ $positions: (
 $btnPadding: 0.5rem 1rem !default; // default button padding
 $btnPrimaryColour: map-get(
   $blues,
-  200
+  105
 ) !default; // default primary button color
 $btnSecondaryColour: map-get(
   $reds,
-  200
+  105
 ) !default; // default secondary button color
 $btnBorderWidth: 2px !default; // default button border width
 $btnBoxShadow: true !default; // default button box shadow
 
+// Form Variables
+/// @group v
+$inputBorderColour: map-get($monochrome, 155) !default; // default input border color
+$inputBorderWidth: 2px !default; // default input border widths
