@@ -1,18 +1,15 @@
 /// Base White
 /// @group cv
-/// @name White
 $white: #ffffff !default;
 $whiteRGBA: hex-to-rgba($white, 1);
 
 /// Base Black
 /// @group cv
-/// @name Black
 $black: #000000 !default;
 $blackRGBA: hex-to-rgba($black, 1);
 
-/// Monochrome
+/// Monochromatic Colours
 /// @group cv
-/// @name Monochrome, Black to White
 $monochrome: (
   100:#000000,
   105:#0d0d0d,
@@ -38,7 +35,6 @@ $monochrome: (
 
 /// Shades of red
 /// @group cv
-/// @name Shades of Red
 $reds: (
   100: #ff0000,
   105: #ff1a1a,
@@ -50,10 +46,8 @@ $reds: (
   135: #ffb3b3,
   140: #ffcccc) !default;
 
-/// Green
+/// Shades of Green
 /// @group cv
-/// @name Green
-$green: #00ff00 !default;
 $greens: (
   100: #00ff00,
   105: #1aff1a,
@@ -65,9 +59,8 @@ $greens: (
   135: #b3ffb3,
   140: #ccffcc) !default;
 
-/// Blues
+/// Shades of Blue
 /// @group cv
-/// @name Blues
 $blues: (
   100: #0000ff,
   105: #1a1aff,
@@ -81,14 +74,13 @@ $blues: (
 
 /// Named Colours
 /// @group cv
-/// @name Named Colours
 $named-colours: (
   "AliceBlue": #f0f8ff,
   "AntiqueWhite": #faebd7,
   "Aqua": #00ffff,
   "Aquamarine": #7fffd4,
   "Azure": #f0ffff,
-  //B
+  ///B
   "Beige": #f5f5dc,
   "Bisque": #ffe4c4,
   "BlanchedAlmond": #ffebcd,

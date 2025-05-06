@@ -19,7 +19,7 @@
   "type": "commonjs",
   "main": "index.html",
   "scripts": {
-    "sassdoc": "sassdoc --verbose --config sassdoc.json --theme default --dest documentation/scss scss"
+    "sassdoc": "sassdoc --verbose --config sassdoc.json --theme neat --dest documentation/scss scss"
   },
   "devDependencies": {
     "sassdoc": "^2.7.4"
