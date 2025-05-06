@@ -22,12 +22,10 @@
 @import 'components';
 
 
-
-
-
-@if (map-get( $config, 'bsGrid') ) {
+@if ($bsGrdid) {
   @import 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-grid.min.css';
 }
+
 
 
 // testing

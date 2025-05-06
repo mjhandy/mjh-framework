@@ -13,3 +13,10 @@
     @error "hex-to-rgba(): #{$color} is not a valid hex color.";
   }
 }
+
+
+/// check $config for boolean value
+@function is-boolean($map, $key) {
+  $value: map-get($map, $key);
+  @return type-of($value) == boolean;
+}

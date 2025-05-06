@@ -1,25 +1,17 @@
 /// SCSS Prefix. Adjust this to change the prefix for all classes.
 /// @group cv
 /// @name Prefix
-$prefix: 'mjh' !default;
-
+$prefix: "mjh" !default;
 
 /// Sans Serif Font Family
 /// @group tv
 /// @name Sans Serif Font Family
-$font-family-sans-serif: 'Roboto',
-  'Helvetica Neue',
-  Arial,
-  sans-serif !default;
+$font-family-sans-serif: "Roboto", "Helvetica Neue", Arial, sans-serif !default;
 
 /// Serif Font Family
 /// @group tv
 /// @name Serif Font Family
-$font-family-serif: 'Georgia',
-  'Times New Roman',
-  Times,
-  serif !default;
-
+$font-family-serif: "Georgia", "Times New Roman", Times, serif !default;
 
 /// Base font size
 /// @group tv
@@ -33,7 +25,7 @@ $line-height-base: 1.5 !default; // this can only have a REM unit, PX will cause
 /// Base font colour
 /// @group tv
 /// @name Base font colour
-$base-colour: map-get($monochrome, 105) !default; // default base color 
+$base-colour: map-get($monochrome, 105) !default; // default base color
 
 /// Heading sizes
 /// @group tv
@@ -48,7 +40,8 @@ $heading: (
   h3: $font-size-base * 2,
   h4: $font-size-base * 1.5,
   h5: $font-size-base * 1.25,
-  h6: $font-size-base * 1.125) !default;
+  h6: $font-size-base * 1.125,
+) !default;
 
 //spacing
 $space: 10px !default;
@@ -60,8 +53,8 @@ $spaces: (
   5: $space * 1.25,
   6: $space * 1.5,
   7: $space * 1.75,
-  8: $space * 2) !default;
-
+  8: $space * 2,
+) !default;
 
 /// Media Breakpoints
 /// @group cv
@@ -72,7 +65,8 @@ $bps: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px) !default;
+  xxl: 1400px,
+) !default;
 
 /// Max Container Widths
 /// @group cv
@@ -83,7 +77,8 @@ $maContainerWidths: (
   md: 720px,
   lg: 960px,
   xl: 1140px,
-  xxl: 1320px) !default;
+  xxl: 1320px,
+) !default;
 
 // widths as %
 $w: (
@@ -95,7 +90,8 @@ $w: (
   66: 66.6667%,
   75: 75%,
   875: 87.5%,
-  100: 100%) !default;
+  100: 100%,
+) !default;
 
 // position classes
 $positions: (
@@ -103,24 +99,29 @@ $positions: (
   relative: relative,
   absolute: absolute,
   fixed: fixed,
-  sticky: sticky) !default;
+  sticky: sticky,
+) !default;
 
 /// button variables
 /// @group vr
 /// @name Button variables
-/// 
+///
 $btnPadding: 0.5rem 1rem !default; // default button padding
-$btnPrimaryColour: map-get($blues, 200) !default; // default primary button color
-$btnSecondaryColour: map-get($reds, 200) !default; // default secondary button color
+$btnPrimaryColour: map-get(
+  $blues,
+  200
+) !default; // default primary button color
+$btnSecondaryColour: map-get(
+  $reds,
+  200
+) !default; // default secondary button color
 $btnBorderWidth: 2px !default; // default button border width
 $btnBoxShadow: true !default; // default button box shadow
 
 /// SCSS Config Items
 /// @group Config
 /// @name Config Items
-/// 
-/// 
-$config: (
-  bsGrid: true, // use the Boostrap based grid system
-  btnBoxShadow: false, // use the box shadow for buttons
-  )
+///
+///
+$namedColours: false;
+$bsGrdid: true; 
