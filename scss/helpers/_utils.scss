@@ -5,19 +5,19 @@
 .m {
 	@each $space, $value in $spaces {
 		&t-#{$space} {
-			margin-top: $value;
+			margin-top: $value !important;
 		}
 
 		&r-#{$space} {
-			margin-right: $value;
+			margin-right: $value !important;
 		}
 
 		&b-#{$space} {
-			margin-bottom: $value;
+			margin-bottom: $value !important;
 		}
 
 		&l-#{$space} {
-			margin-left: $value;
+			margin-left: $value !important;
 		}
 	}
 }
@@ -26,19 +26,19 @@
 .p {
 	@each $space, $value in $spaces {
 		&t-#{$space} {
-			margin-top: $value;
+			padding-top: $value !important;
 		}
 
 		&r-#{$space} {
-			margin-right: $value;
+			padding-right: $value !important;
 		}
 
 		&b-#{$space} {
-			margin-bottom: $value;
+			padding-bottom: $value !important;
 		}
 
 		&l-#{$space} {
-			margin-left: $value;
+			padding-left: $value !important;
 		}
 	}
 }

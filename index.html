@@ -100,9 +100,10 @@
                 <form>
                   <fieldset>
                     <legend>Text Input Fields</legend>
-                    <div>
-                      <label for="name">Name</label>
-                      <input type="text" id="name" name="name" placeholder="Name" class="form-input--textField">                      
+                    <div class="form-group mt-3 mb-3">
+                      <label for="name" form="name" class="form-label">Name <span class="req">*</span></label>
+                      <input type="text" id="name" name="name" placeholder="Name" class="form-textField" required>
+                      <div class="form-error pt-2">Please enter your name</div>                      
                     </div>
                   </fieldset>
                 </form>

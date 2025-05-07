@@ -1,10 +1,24 @@
 .form {
-  &-input {
-    &--textField {
-      border: $inputBorderWidth solid $inputBorderColour;
-      padding: 5px;
-      border-radius: 5px;
-      @include boxShadow (3, 4, 300);
+  &-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  &-textField {
+    border: $inputBorderWidth solid $inputBorderColour;
+    padding: 5px;
+    border-radius: 5px;
+    @include boxShadow(3, 4, 300);
+
+  }
+  &-error{
+    color: $error;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  &-label {
+    .req {
+      color: $error;
     }
   }
 }
