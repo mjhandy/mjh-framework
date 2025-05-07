@@ -1,5 +1,5 @@
 /// SCSS Prefix. Adjust this to change the prefix for all classes.
-/// @group v
+/// @group sv
 $prefix: "mjh" !default;
 
 /// Sans Serif Font Family
@@ -37,7 +37,7 @@ $heading: (
 ) !default;
 
 /// Basic space variable
-/// @group v
+/// @group sv
 $space: 10px !default;
 
 /// Sapcing map
@@ -88,19 +88,24 @@ $positions: (
   sticky: sticky,
 ) !default;
 
-/// button variables
-/// @group v
+/// Button Padding
+/// @group sv
 $btnPadding: 0.5rem 1rem !default; // default button padding
+
+/// Button Primary Colour
+/// @group sv
 $btnPrimaryColour: map-get(
   $blues,
-  105
+  200
 ) !default; // default primary button color
 $btnSecondaryColour: map-get(
   $reds,
-  105
+  200
 ) !default; // default secondary button color
 $btnBorderWidth: 2px !default; // default button border width
-$btnBoxShadow: true !default; // default button box shadow
+
+/// 
+
 
 // Form Variables
 /// @group v
