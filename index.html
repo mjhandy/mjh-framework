@@ -91,7 +91,7 @@
                   </div>                  
                 </div>
           </section>
-          <section id="forms">
+          <section id="forms" class="mb-5">
             <div class="conntainer">              
               <div class="row">
                 <div class="col-8"><h3>Forms</h3></div>                  
@@ -100,11 +100,23 @@
                 <form>
                   <fieldset>
                     <legend>Text Input Fields</legend>
-                    <div class="form-group mt-3 mb-3">
-                      <label for="name" form="name" class="form-label">Name <span class="req">*</span></label>
-                      <input type="text" id="name" name="name" placeholder="Name" class="form-textField" required>
-                      <div class="form-error pt-2">Please enter your name</div>                      
-                    </div>
+                    
+                      <div class="form-group mt-3 mb-3 w-50">
+                        <label for="name" form="name" class="form-label">Name <span class="req">*</span></label>
+                        <input type="text" id="name" name="name" placeholder="Name" class="form-textField" required>
+                        <div class="form-error pt-2"></div>                     
+                      </div>
+                      <div class="form-group mt-3 mb-3 w-50">
+                        <label for="name" form="name" class="form-label">Name <span class="req">*</span></label>
+                        <input type="text" id="name" name="name" placeholder="Name" class="form-textField" required>
+                        <div class="form-error pt-2"></div>                      
+                      </div>
+                      <div class="form-group mt-3 mb-3 col-6">
+                        <label for="comment" form="name" class="form-label">Comment</label>
+                        <textarea name="comment" id="comment" rows="5" cols="10" placeholder="Comment Box" class="form-textField"></textarea>
+                        <div class="form-error pt-2"></div>
+                      </div>
+                   
                   </fieldset>
                 </form>
               </div>
