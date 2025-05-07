@@ -9,5 +9,9 @@
     "mx": "Mixins",
     "cf": "Config",
     "sm": "Sass Maps",
-    "sv": "Sass Variable"}
+    "v": "Variables",
+    "cmp": "Components",
+    "fn": "Functions",
+    "hp": "Helpers"
+  }
 }

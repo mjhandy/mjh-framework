@@ -1,6 +1,8 @@
-
 /// this is a flexbox helper class
-/// @group Helpers
+/// @group hp
+///
+/// @author Mark Handy
+/// 
 .flex {
   display: flex;
 
@@ -10,7 +12,10 @@
 }
 
 /// this is a justify helper class
-/// @group Helpers
+/// @group hp
+///
+/// @author Mark Handy
+/// 
 .justify {
   &-start {
     justify-content: flex-start;
@@ -34,7 +39,10 @@
 }
 
 /// this is a align helper class
-/// @group Helpers
+/// @group hp
+///
+/// @author Mark Handy
+/// 
 .align {
   &-start {
     align-items: flex-start;
@@ -58,7 +66,10 @@
 }
 
 /// this is a wrap helper clas
-/// @group Helpers
+/// @group hp
+///
+/// @author Mark Handy
+/// 
 .wrap {
   &-wrap {
     flex-wrap: wrap;
