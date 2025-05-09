@@ -7,6 +7,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="/css/main.css">
+
+  <!-- Form Validation -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const form = document.querySelector("form");
+      form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const isValid = validateForm(form);
+        if (isValid) {
+          form.submit();
+        }
+      });
+    });
+
+    function validateForm(form) {
+      let isValid = true;
+      const fields = form.querySelectorAll("[required]");
+      fields.forEach(function(field) {
+        if (!field.value) {
+          isValid = false;
+          field.classList.add("is-invalid");
+        } else {
+          field.classList.remove("is-invalid");
+        }
+      });
+      return isValid;
+    }
+  </script>
 </head>
 
 <body>
@@ -15,8 +43,8 @@
     <div class="container">
 
       <div class="row">
-        <div class="col-2">
-          <nav class="sidebar pos-fixed">
+        <div class="col-12 col-md-2" >
+          <nav class="sidebar">
             <ul class="nav-list p-0">
               <li class="mb-2"><a href="#intro">Introduction</a></li>
               <li class="mb-2"><a href="#mixins">Mixins</a></li>
@@ -24,7 +52,7 @@
             </ul>
           </nav>
         </div>
-        <div class="col-10">
+        <div class="col-12 col-md-10">
           <section id="intro">
             <div class="row">
               <div class="col-sm-12 col-xl-8">
@@ -102,21 +130,33 @@
                     <legend>Text Input Fields</legend>
                     
                       <div class="form-group mt-3 mb-3 w-50">
-                        <label for="name" form="name" class="form-label">Name <span class="req">*</span></label>
-                        <input type="text" id="name" name="name" placeholder="Name" class="form-textField" required>
+                        <label for="fName" class="form-label">First Name <span class="req">*</span></label>
+                        <input type="text" id="fName" name="fName" placeholder="Name" class="form-textField" required>
                         <div class="form-error pt-2"></div>                     
                       </div>
                       <div class="form-group mt-3 mb-3 w-50">
-                        <label for="name" form="name" class="form-label">Name <span class="req">*</span></label>
+                        <label for="name" class="form-label">Name <span class="req">*</span></label>
                         <input type="text" id="name" name="name" placeholder="Name" class="form-textField" required>
                         <div class="form-error pt-2"></div>                      
                       </div>
                       <div class="form-group mt-3 mb-3 col-6">
-                        <label for="comment" form="name" class="form-label">Comment</label>
+                        <label for="comment" class="form-label">Comment</label>
                         <textarea name="comment" id="comment" rows="5" cols="10" placeholder="Comment Box" class="form-textField"></textarea>
                         <div class="form-error pt-2"></div>
                       </div>
                    
+                  </fieldset>
+                  <fieldset>
+                    <legend>Username & Password</legend>
+                    <div>
+                      
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Form Controls</legend>
+                    <div class="btn-group">
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                      <button type="reset" class="btn btn-secondary">Reset</button>
                   </fieldset>
                 </form>
               </div>
@@ -130,6 +170,8 @@
     </div>
   </main>
   <footer></footer>
+  <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+  
 
 
 </html>
