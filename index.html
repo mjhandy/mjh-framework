@@ -9,31 +9,10 @@
   <link rel="stylesheet" type="text/css" href="/css/main.css">
 
   <!-- Form Validation -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const form = document.querySelector("form");
-      form.addEventListener("submit", function(event) {
-        event.preventDefault();
-        const isValid = validateForm(form);
-        if (isValid) {
-          form.submit();
-        }
-      });
-    });
-
-    function validateForm(form) {
-      let isValid = true;
-      const fields = form.querySelectorAll("[required]");
-      fields.forEach(function(field) {
-        if (!field.value) {
-          isValid = false;
-          field.classList.add("is-invalid");
-        } else {
-          field.classList.remove("is-invalid");
-        }
-      });
-      return isValid;
-    }
+  <script type="text/javascript" src="https://unpkg.com/validator@latest/validator.min.js"></script>
+  <script type="text/javascript">
+    var form = document.querySelector('form'),
+        input = form.find('input[type="text"]');
   </script>
 </head>
 
@@ -125,13 +104,13 @@
                 <div class="col-8"><h3>Forms</h3></div>                  
               </div>
               <div class="row"> 
-                <form>
+                <form novalidate class="form" action="" method="post" id="form">
                   <fieldset>
                     <legend>Text Input Fields</legend>
                     
                       <div class="form-group mt-3 mb-3 w-50">
-                        <label for="fName" class="form-label">First Name <span class="req">*</span></label>
-                        <input type="text" id="fName" name="fName" placeholder="Name" class="form-textField" required>
+                        <label for="fName" class="form-label required">First Name <span class="req">*</span></label>
+                        <input type="text" id="fName" name="fName" placeholder="Name" class="form-textField">
                         <div class="form-error pt-2"></div>                     
                       </div>
                       <div class="form-group mt-3 mb-3 w-50">
@@ -170,7 +149,7 @@
     </div>
   </main>
   <footer></footer>
-  <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+ 
   
 
 
