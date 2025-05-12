@@ -8,12 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="/css/main.css">
 
-  <!-- Form Validation -->
-  <script type="text/javascript" src="https://unpkg.com/validator@latest/validator.min.js"></script>
-  <script type="text/javascript">
-    var form = document.querySelector('form'),
-        input = form.find('input[type="text"]');
-  </script>
+
 </head>
 
 <body>
@@ -66,7 +61,6 @@
               </div>
             </div>
           </section>
-
           <section id="buttons">
             <div class="row">
               <div class="col-8">
@@ -134,7 +128,7 @@
                   <fieldset>
                     <legend>Form Controls</legend>
                     <div class="btn-group">
-                      <button type="submit" class="btn btn-primary">Submit</button>
+                      <button type="submit" id="btn-submit" class="btn btn-primary">Submit</button>
                       <button type="reset" class="btn btn-secondary">Reset</button>
                   </fieldset>
                 </form>
@@ -151,6 +145,29 @@
   <footer></footer>
  
   
+  <!-- Form Validation -->
+  
+  <script type="text/javascript">
+      const smbButton = document.getElementById('btn-submit');
+      const fName = document.getElementById('fName');
+      const validate = (e) => {
+        e.preventDefault();
+        // alert('submit button has been clicked');
+        // validate firstnme
+        if (fName.value === "") {
+          fName.classList.add('invalid')
+          console.debug('validation: First Name not valid')
+          fName.focus();
+          
+          return false;
+        }
 
+          return true;
+      }
+
+
+
+      smbButton.addEventListener('click', validate);
+  </script>
 
 </html>

@@ -29,14 +29,23 @@ fieldset {
     padding: 5px;
     border-radius: 5px;
     @include font-size(1.2rem, 1);
-    @include boxShadow(3, 4, 300);
-
+    // @include boxShadow(3, 4, 300);
+    
   }
 
   &-error {
     color: $error;
     font-size: 0.8rem;
     font-weight: 700;
+  }
+
+  //invalid 
+  input[type="text"],
+  input[type="email"] {
+    &.invalid {
+      border: 2px solid red;
+      outline: red;
+    }
   }
 
 }
