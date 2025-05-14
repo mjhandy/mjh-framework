@@ -17,7 +17,7 @@
     <div class="container">
 
       <div class="row">
-        <div class="col-12 col-md-2" >
+        <div class="col-12 col-md-2">
           <nav class="sidebar">
             <ul class="nav-list p-0">
               <li class="mb-2"><a href="#intro">Introduction</a></li>
@@ -89,49 +89,61 @@
                     <button class="btn btn-secondaryGhost">
                       <span class="icon bi bi-search"></span>
                       Primary Ghost Icon</button>
-                  </div>                  
+                  </div>
                 </div>
           </section>
           <section id="forms" class="mb-5">
-            <div class="conntainer">              
+            <div class="conntainer">
               <div class="row">
-                <div class="col-8"><h3>Forms</h3></div>                  
+                <div class="col-8">
+                  <h3>Forms</h3>
+                </div>
               </div>
-              <div class="row"> 
-                <form novalidate class="form" action="" method="post" id="form">
-                  <fieldset>
-                    <legend>Text Input Fields</legend>
-                    
-                      <div class="form-group mt-3 mb-3 w-50">
-                        <label for="fName" class="form-label required">First Name <span class="req">*</span></label>
-                        <input type="text" id="fName" name="fName" placeholder="First Name" class="form-textField">
-                        <div class="form-error" id="fName-message" aria-live="polite"></div>                     
+              <div class="row">
+                <div class="col-12">
+                  <form novalidate class="form" action="" method="post" id="form">
+                    <fieldset class="row">
+                      <legend>Text Input Fields</legend>
+                      <div class="col-12 col-lg-6">
+                        <div class="form-group mt-3 mb-3 w-50">
+                          <label for="fName" class="form-label required">First Name <span class="req">*</span></label>
+                          <input type="text" id="fName" name="fName" placeholder="First Name" class="form-textField">
+                          <div class="form-error" id="fName-message" aria-live="polite"></div>
+                        </div>
                       </div>
-                      <div class="form-group mt-3 mb-3 w-50">
-                        <label for="lName" class="form-label">Last Name <span class="req">*</span></label>
-                        <input type="text" id="lName" name="lName" placeholder="Last Name" class="form-textField" required>
-                        <div class="form-error" id="lName-message" aria-live="polite"></div>                      
+                      <div class="col-12 col-lg-6">
+                        <div class="form-group mt-3 mb-3 w-50">
+                          <label for="lName" class="form-label">Last Name <span class="req">*</span></label>
+                          <input type="text" id="lName" name="lName" placeholder="Last Name" class="form-textField"
+                            required>
+                          <div class="form-error" id="lName-message" aria-live="polite"></div>
+                        </div>
                       </div>
+
+
                       <div class="form-group mt-3 mb-3 col-6">
                         <label for="comment" class="form-label">Comment</label>
-                        <textarea name="comment" id="comment" rows="5" cols="10" placeholder="Comment Box" class="form-textField"></textarea>
+                        <textarea name="comment" id="comment" rows="5" cols="10" placeholder="Comment Box"
+                          class="form-textField"></textarea>
                         <div class="form-error" id="comment-message" aria-live="polite"></div>
                       </div>
-                   
-                  </fieldset>
-                  <fieldset>
-                    <legend>Username & Password</legend>
-                    <div>
-                      
-                    </div>
-                  </fieldset>
-                  <fieldset>
-                    <legend>Form Controls</legend>
-                    <div class="btn-group">
-                      <button type="submit" id="btn-submit" class="btn btn-primary">Submit</button>
-                      <button type="button" id="btn-reset" class="btn btn-secondary">Reset</button>
-                  </fieldset>
-                </form>
+
+                    </fieldset>
+                    <fieldset>
+                      <legend>Username & Password</legend>
+                      <div>
+
+                      </div>
+                    </fieldset>
+                    <fieldset>
+                      <legend>Form Controls</legend>
+                      <div class="btn-group">
+                        <button type="submit" id="btn-submit" class="btn btn-primary">Submit</button>
+                        <button type="button" id="btn-reset" class="btn btn-secondary">Reset</button>
+                    </fieldset>
+                  </form>
+                </div>
+
               </div>
             </div>
           </section>
@@ -143,74 +155,88 @@
     </div>
   </main>
   <footer></footer>
- 
-  
+
+
   <!-- Form Validation -->
-  
+
   <script type="text/javascript">
-      const submitButton = document.getElementById('btn-submit');
-      const resetButton = document.getElementById('btn-reset');
+    const submitButton = document.getElementById('btn-submit');
+    const resetButton = document.getElementById('btn-reset');
 
-      const fName = document.getElementById('fName');
-      const fNameErrorMessage = document.getElementById('fName-message');
+    const fName = document.getElementById('fName');
+    const fNameErrorMessage = document.getElementById('fName-message');
 
-      const lName = document.getElementById('lName');      
-      const lNameErrorMessage = document.getElementById('lName-message');
+    const lName = document.getElementById('lName');
+    const lNameErrorMessage = document.getElementById('lName-message');
 
-      const validate = (e) => {
-        e.preventDefault();
+    const comment = document.getElementById('comment');
+    const commentErrorMessage = document.getElementById('comment-message');
 
-        console.log('last name:', lName.value);
+    let isValid = true;
+
+    const validate = (e) => {
+      e.preventDefault();
 
 
-        let isValid = true;
-        // validate firstnme
-        if (fName.value === "") {
-          fName.classList.add('invalid');
-          fNameErrorMessage.textContent = 'Please enter a valid First Name.';
-          fName.focus();          
-          return false;
-        }
-        else{
-          // clear any invalid indicators
-          fName.classList.remove('invalid');
-          fNameErrorMessage.textContent= '';
-          fName.classList.add('valid'); 
-          return true;
-        }
-        // validate last name
-        if (lName.value === "") {
-          lName.classList.add('invalid');
-          lNameErrorMessage.textContent = 'Please enter a valid Last Name.';
-          lName.focus();          
-          return false;
-        }
-        else{
-          // clear any invalid indicators
-          lName.classList.remove('invalid');
-          lNameErrorMessage.textContent= '';
-          lName.classList.add('valid'); 
-          return true;
-        }
-          
+
+      // validate firstnme
+      if (fName.value === "") {
+        fName.classList.add('invalid');
+        fNameErrorMessage.textContent = 'Please enter a valid First Name.';
+        fName.focus();
+        isValid = false;
       }
-
-
-
-      submitButton.addEventListener('click', validate);
-      resetButton.addEventListener('click', function () {
-        document.getElementById("form").reset(); 
-        
-        // Reset form fields
+      else {
+        // clear any invalid indicators
         fName.classList.remove('invalid');
-        fName.classList.remove('valid');
-        fNameErrorMessage.textContent="";
-
+        fNameErrorMessage.textContent = '';
+        fName.classList.add('valid');
+      }
+      // validate last name
+      if (lName.value === "") {
+        lName.classList.add('invalid');
+        lNameErrorMessage.textContent = 'Please enter a valid Last Name.';
+        lName.focus();
+        isValid = false;
+      }
+      else {
+        // clear any invalid indicators
         lName.classList.remove('invalid');
-        lName.classList.remove('valid');
-        lNameErrorMessage.textContent="";
-      
-      });
+        lNameErrorMessage.textContent = '';
+        lName.classList.add('valid');
+
+      }
+      // validate comment box
+      if (comment.value === "") {
+        comment.classList.add('invalid');
+        commentErrorMessage.textContent = 'Please enter a valid Comment.';
+        comment.focus();
+        isValid = false;
+      }
+      else {
+        // clear any invalid indicators
+        comment.classList.remove('invalid');
+        commentErrorMessage.textContent = '';
+        comment.classList.add('valid');
+      }
+    }
+
+
+
+    submitButton.addEventListener('click', validate);
+    resetButton.addEventListener('click', function () {
+      document.getElementById("form").reset();
+
+      // Reset form fields
+      fName.classList.remove('invalid');
+      fName.classList.remove('valid');
+      fNameErrorMessage.textContent = "";
+
+      lName.classList.remove('invalid');
+      lName.classList.remove('valid');
+      lNameErrorMessage.textContent = "";
+
+    });
   </script>
 
 </html>
