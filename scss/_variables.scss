@@ -114,4 +114,4 @@ $inputBorderColour: map-get(
 ) !default; // default input border color
 $inputBorderWidth: 1px !default; // default input border widths
 $error: darken(map-get($reds, 105), 20%) !default; // default error color
-$success: map-get($greens, 105) !default; // default success color
+$success: darken(map-get($greens, 100), 20%)   !default; // default success color
