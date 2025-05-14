@@ -105,7 +105,7 @@
                       <div class="form-group mt-3 mb-3 w-50">
                         <label for="fName" class="form-label required">First Name <span class="req">*</span></label>
                         <input type="text" id="fName" name="fName" placeholder="Name" class="form-textField">
-                        <div class="form-error pt-2"></div>                     
+                        <div class="form-error pt-2" id="fName-message" aria-live="polite"></div>                     
                       </div>
                       <div class="form-group mt-3 mb-3 w-50">
                         <label for="name" class="form-label">Name <span class="req">*</span></label>
@@ -129,7 +129,7 @@
                     <legend>Form Controls</legend>
                     <div class="btn-group">
                       <button type="submit" id="btn-submit" class="btn btn-primary">Submit</button>
-                      <button type="reset" class="btn btn-secondary">Reset</button>
+                      <button type="button" id="btn-reset" class="btn btn-secondary">Reset</button>
                   </fieldset>
                 </form>
               </div>
@@ -148,14 +148,19 @@
   <!-- Form Validation -->
   
   <script type="text/javascript">
-      const smbButton = document.getElementById('btn-submit');
+      const submitButton = document.getElementById('btn-submit');
+      const resetButton = document.getElementById('btn-reset');
       const fName = document.getElementById('fName');
+      const fNameErrorMessage = document.getElementById('fName-message');
+      const lName = document.getElementById('lName');
       const validate = (e) => {
         e.preventDefault();
+        let isValid = true;
         // alert('submit button has been clicked');
         // validate firstnme
         if (fName.value === "") {
-          fName.classList.add('invalid')
+          fName.classList.add('invalid');
+          fNameErrorMessage.textContent = 'Please enter a valid First Name.';
           console.debug('validation: First Name not valid')
           fName.focus();
           
@@ -167,7 +172,15 @@
 
 
 
-      smbButton.addEventListener('click', validate);
+      submitButton.addEventListener('click', validate);
+      resetButton.addEventListener('click', function () {
+        document.getElementById("form").reset(); // Reset form fields
+        fName.classList.remove('invalid');
+        fNameErrorMessage.textContent="";
+      
+        // document.getElementById("nameError").textContent = ""; // Clear name error
+        // document.getElementById("emailError").textContent = ""; // Clear email error
+      });
   </script>
 
 </html>
