@@ -181,12 +181,13 @@
     const comment = document.getElementById('comment');
     const commentErrorMessage = document.getElementById('comment-message');
 
+    const pw = document.getElementById('password');
+    const pwck = document.getElementById('passwordChk');
+
     let isValid = true;
 
     const validate = (e) => {
       e.preventDefault();
-
-
 
       // validate firstnme
       if (fName.value === "") {
