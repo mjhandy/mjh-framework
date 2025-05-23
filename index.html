@@ -134,14 +134,17 @@
                       <div class="form-group">
                         <label for="username" class="form-label">User Name`</label>
                         <input type="text" id="username" name="username" placeholder="Username" class="form-textField"></input>
+                        <div class="form-error" id="username-message" aria-live="polite"></div>
                       </div>
                       <div class="form-group">
                         <label for="password" class="form-label">Password</label>
                         <input type="password" id="password" class="form-textField" name="password"></input>
+                        <div class="form-error" id="password-message" aria-live="polite"></div>
                       </div>
                       <div class="form-group">
                         <label for="passwordChk" class="form-label">Password Check</label>
                         <input type="password" id="passwordChk" class="form-textField" name="passwordChk"></input>
+                        <div class="form-error" id="passwordChk-message" aria-live="polite"></div>
                       </div>
                     </fieldset>
                     <fieldset>
@@ -182,6 +185,9 @@
     const commentErrorMessage = document.getElementById('comment-message');
 
     const pw = document.getElementById('password');
+    // password regex: Minimum eight characters, at least one upper case English letter, 
+    // one lower case English letter, one number and one special character
+    const pwRegEx = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/;
     const pwck = document.getElementById('passwordChk');
 
     let isValid = true;
@@ -229,6 +235,11 @@
         commentErrorMessage.textContent = '';
         comment.classList.add('valid');
       }
+      // validate password
+      if (pw.value === ""){
+        
+      }
+      // validate password match
     }
 
 
