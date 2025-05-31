@@ -11,6 +11,17 @@
   }
 }
 
+/// this is a flex direction helper class
+/// @group hp
+///
+/// @author Mark Handy
+/// 
+.flex{
+  &-row{
+    flex-direction: row;
+  }
+}
+
 /// this is a justify helper class
 /// @group hp
 ///
